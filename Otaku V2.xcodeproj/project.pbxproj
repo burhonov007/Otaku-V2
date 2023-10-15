@@ -7,48 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2FDA2D2ADBD63C00ED5C9D /* VerticalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA2C2ADBD63C00ED5C9D /* VerticalList.swift */; };
+		0D2FDA2F2ADBD8D900ED5C9D /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA2E2ADBD8D900ED5C9D /* InfoView.swift */; };
+		0D2FDA342ADBDBEF00ED5C9D /* Unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA332ADBDBEF00ED5C9D /* Unique.swift */; };
+		0D2FDA362ADBEFE700ED5C9D /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA352ADBEFE700ED5C9D /* FilterVC.swift */; };
+		0D2FDA3A2ADBF05100ED5C9D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA392ADBF05100ED5C9D /* Filter.swift */; };
+		0D2FDA3C2ADBF0ED00ED5C9D /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA3B2ADBF0ED00ED5C9D /* FilterCell.swift */; };
+		0D2FDA3E2ADBF32E00ED5C9D /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA3D2ADBF32E00ED5C9D /* FavouriteVC.swift */; };
+		0D2FDA402ADBF48300ED5C9D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA3F2ADBF48300ED5C9D /* SearchVC.swift */; };
+		0D2FDA422ADC07FA00ED5C9D /* EpisodesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA412ADC07FA00ED5C9D /* EpisodesVC.swift */; };
+		0D2FDA482ADC0A5A00ED5C9D /* QualityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA472ADC0A5A00ED5C9D /* QualityVC.swift */; };
+		0D2FDA4A2ADC0AA600ED5C9D /* Quality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA492ADC0AA600ED5C9D /* Quality.swift */; };
+		0D2FDA4C2ADC0ADD00ED5C9D /* QualityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2FDA4B2ADC0ADD00ED5C9D /* QualityCell.swift */; };
+		0D7773712ADA9D120034839D /* UniqueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7773702ADA9D120034839D /* UniqueCell.swift */; };
+		0D7773742ADA9E140034839D /* SortVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7773732ADA9E140034839D /* SortVC.swift */; };
+		0D7773762ADAA0E70034839D /* StaticUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7773752ADAA0E70034839D /* StaticUIElements.swift */; };
+		0D77737A2ADAA6B00034839D /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7773792ADAA6B00034839D /* Anime.swift */; };
 		0DA10AEE2ACD1F5D0091432A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10AED2ACD1F5D0091432A /* AppDelegate.swift */; };
-		0DA10AF02ACD1F5D0091432A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10AEF2ACD1F5D0091432A /* SceneDelegate.swift */; };
-		0DA10AF22ACD1F5D0091432A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10AF12ACD1F5D0091432A /* ViewController.swift */; };
+		0DA10AF22ACD1F5D0091432A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10AF12ACD1F5D0091432A /* MainVC.swift */; };
 		0DA10AF52ACD1F5D0091432A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA10AF32ACD1F5D0091432A /* Main.storyboard */; };
 		0DA10AF72ACD1F600091432A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA10AF62ACD1F600091432A /* Assets.xcassets */; };
 		0DA10AFA2ACD1F600091432A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA10AF82ACD1F600091432A /* LaunchScreen.storyboard */; };
-		0DA10B052ACD1F600091432A /* Otaku_V2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10B042ACD1F600091432A /* Otaku_V2Tests.swift */; };
-		0DA10B0F2ACD1F600091432A /* Otaku_V2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10B0E2ACD1F600091432A /* Otaku_V2UITests.swift */; };
-		0DA10B112ACD1F600091432A /* Otaku_V2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10B102ACD1F600091432A /* Otaku_V2UITestsLaunchTests.swift */; };
+		0DA10B1E2ACD2CF60091432A /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA10B1D2ACD2CF60091432A /* InfoVC.swift */; };
+		0DDC69F92ACE45A90018A8BF /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC69F82ACE45A90018A8BF /* AnimeCell.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		0DA10B012ACD1F600091432A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0DA10AE22ACD1F5C0091432A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0DA10AE92ACD1F5D0091432A;
-			remoteInfo = "Otaku V2";
-		};
-		0DA10B0B2ACD1F600091432A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0DA10AE22ACD1F5C0091432A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0DA10AE92ACD1F5D0091432A;
-			remoteInfo = "Otaku V2";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0D2FDA2C2ADBD63C00ED5C9D /* VerticalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalList.swift; sourceTree = SOURCE_ROOT; };
+		0D2FDA2E2ADBD8D900ED5C9D /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoView.swift; path = "Otaku V2/View/InfoView.swift"; sourceTree = SOURCE_ROOT; };
+		0D2FDA332ADBDBEF00ED5C9D /* Unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unique.swift; sourceTree = "<group>"; };
+		0D2FDA352ADBEFE700ED5C9D /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		0D2FDA392ADBF05100ED5C9D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		0D2FDA3B2ADBF0ED00ED5C9D /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		0D2FDA3D2ADBF32E00ED5C9D /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		0D2FDA3F2ADBF48300ED5C9D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		0D2FDA412ADC07FA00ED5C9D /* EpisodesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesVC.swift; sourceTree = "<group>"; };
+		0D2FDA472ADC0A5A00ED5C9D /* QualityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityVC.swift; sourceTree = "<group>"; };
+		0D2FDA492ADC0AA600ED5C9D /* Quality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quality.swift; sourceTree = "<group>"; };
+		0D2FDA4B2ADC0ADD00ED5C9D /* QualityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityCell.swift; sourceTree = "<group>"; };
+		0D7773702ADA9D120034839D /* UniqueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueCell.swift; sourceTree = "<group>"; };
+		0D7773732ADA9E140034839D /* SortVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortVC.swift; sourceTree = "<group>"; };
+		0D7773752ADAA0E70034839D /* StaticUIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticUIElements.swift; sourceTree = "<group>"; };
+		0D7773792ADAA6B00034839D /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		0DA10AEA2ACD1F5D0091432A /* Otaku V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Otaku V2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA10AED2ACD1F5D0091432A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DA10AEF2ACD1F5D0091432A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DA10AF12ACD1F5D0091432A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DA10AF12ACD1F5D0091432A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		0DA10AF42ACD1F5D0091432A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DA10AF62ACD1F600091432A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA10AF92ACD1F600091432A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA10AFB2ACD1F600091432A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DA10B002ACD1F600091432A /* Otaku V2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Otaku V2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DA10B042ACD1F600091432A /* Otaku_V2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otaku_V2Tests.swift; sourceTree = "<group>"; };
-		0DA10B0A2ACD1F600091432A /* Otaku V2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Otaku V2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DA10B0E2ACD1F600091432A /* Otaku_V2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otaku_V2UITests.swift; sourceTree = "<group>"; };
-		0DA10B102ACD1F600091432A /* Otaku_V2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Otaku_V2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DA10B1D2ACD2CF60091432A /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		0DDC69F82ACE45A90018A8BF /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnimeCell.swift; path = "Otaku V2/Cells/AnimeCell.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,29 +68,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DA10AFD2ACD1F600091432A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DA10B072ACD1F600091432A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2FDA302ADBD8DE00ED5C9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D2FDA2E2ADBD8D900ED5C9D /* InfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D7773722ADA9D170034839D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D7773702ADA9D120034839D /* UniqueCell.swift */,
+				0DDC69F82ACE45A90018A8BF /* AnimeCell.swift */,
+				0D2FDA3B2ADBF0ED00ED5C9D /* FilterCell.swift */,
+				0D2FDA4B2ADC0ADD00ED5C9D /* QualityCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0D77737B2ADAA6B40034839D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D7773792ADAA6B00034839D /* Anime.swift */,
+				0D2FDA332ADBDBEF00ED5C9D /* Unique.swift */,
+				0D2FDA392ADBF05100ED5C9D /* Filter.swift */,
+				0D2FDA492ADC0AA600ED5C9D /* Quality.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0DA10AE12ACD1F5C0091432A = {
 			isa = PBXGroup;
 			children = (
 				0DA10AEC2ACD1F5D0091432A /* Otaku V2 */,
-				0DA10B032ACD1F600091432A /* Otaku V2Tests */,
-				0DA10B0D2ACD1F600091432A /* Otaku V2UITests */,
 				0DA10AEB2ACD1F5D0091432A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				0DA10AEA2ACD1F5D0091432A /* Otaku V2.app */,
-				0DA10B002ACD1F600091432A /* Otaku V2Tests.xctest */,
-				0DA10B0A2ACD1F600091432A /* Otaku V2UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,32 +120,34 @@
 		0DA10AEC2ACD1F5D0091432A /* Otaku V2 */ = {
 			isa = PBXGroup;
 			children = (
+				0D2FDA2C2ADBD63C00ED5C9D /* VerticalList.swift */,
 				0DA10AED2ACD1F5D0091432A /* AppDelegate.swift */,
-				0DA10AEF2ACD1F5D0091432A /* SceneDelegate.swift */,
-				0DA10AF12ACD1F5D0091432A /* ViewController.swift */,
 				0DA10AF32ACD1F5D0091432A /* Main.storyboard */,
 				0DA10AF62ACD1F600091432A /* Assets.xcassets */,
 				0DA10AF82ACD1F600091432A /* LaunchScreen.storyboard */,
 				0DA10AFB2ACD1F600091432A /* Info.plist */,
+				0D7773722ADA9D170034839D /* Cells */,
+				0DA10B1F2ACD2F710091432A /* Controller */,
+				0D77737B2ADAA6B40034839D /* Model */,
+				0D2FDA302ADBD8DE00ED5C9D /* View */,
+				0D7773752ADAA0E70034839D /* StaticUIElements.swift */,
 			);
 			path = "Otaku V2";
 			sourceTree = "<group>";
 		};
-		0DA10B032ACD1F600091432A /* Otaku V2Tests */ = {
+		0DA10B1F2ACD2F710091432A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0DA10B042ACD1F600091432A /* Otaku_V2Tests.swift */,
+				0DA10AF12ACD1F5D0091432A /* MainVC.swift */,
+				0DA10B1D2ACD2CF60091432A /* InfoVC.swift */,
+				0D7773732ADA9E140034839D /* SortVC.swift */,
+				0D2FDA352ADBEFE700ED5C9D /* FilterVC.swift */,
+				0D2FDA3F2ADBF48300ED5C9D /* SearchVC.swift */,
+				0D2FDA3D2ADBF32E00ED5C9D /* FavouriteVC.swift */,
+				0D2FDA412ADC07FA00ED5C9D /* EpisodesVC.swift */,
+				0D2FDA472ADC0A5A00ED5C9D /* QualityVC.swift */,
 			);
-			path = "Otaku V2Tests";
-			sourceTree = "<group>";
-		};
-		0DA10B0D2ACD1F600091432A /* Otaku V2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				0DA10B0E2ACD1F600091432A /* Otaku_V2UITests.swift */,
-				0DA10B102ACD1F600091432A /* Otaku_V2UITestsLaunchTests.swift */,
-			);
-			path = "Otaku V2UITests";
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,42 +170,6 @@
 			productReference = 0DA10AEA2ACD1F5D0091432A /* Otaku V2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0DA10AFF2ACD1F600091432A /* Otaku V2Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0DA10B172ACD1F600091432A /* Build configuration list for PBXNativeTarget "Otaku V2Tests" */;
-			buildPhases = (
-				0DA10AFC2ACD1F600091432A /* Sources */,
-				0DA10AFD2ACD1F600091432A /* Frameworks */,
-				0DA10AFE2ACD1F600091432A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0DA10B022ACD1F600091432A /* PBXTargetDependency */,
-			);
-			name = "Otaku V2Tests";
-			productName = "Otaku V2Tests";
-			productReference = 0DA10B002ACD1F600091432A /* Otaku V2Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0DA10B092ACD1F600091432A /* Otaku V2UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0DA10B1A2ACD1F600091432A /* Build configuration list for PBXNativeTarget "Otaku V2UITests" */;
-			buildPhases = (
-				0DA10B062ACD1F600091432A /* Sources */,
-				0DA10B072ACD1F600091432A /* Frameworks */,
-				0DA10B082ACD1F600091432A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0DA10B0C2ACD1F600091432A /* PBXTargetDependency */,
-			);
-			name = "Otaku V2UITests";
-			productName = "Otaku V2UITests";
-			productReference = 0DA10B0A2ACD1F600091432A /* Otaku V2UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +182,6 @@
 				TargetAttributes = {
 					0DA10AE92ACD1F5D0091432A = {
 						CreatedOnToolsVersion = 13.2.1;
-					};
-					0DA10AFF2ACD1F600091432A = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 0DA10AE92ACD1F5D0091432A;
-					};
-					0DA10B092ACD1F600091432A = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 0DA10AE92ACD1F5D0091432A;
 					};
 				};
 			};
@@ -220,8 +199,6 @@
 			projectRoot = "";
 			targets = (
 				0DA10AE92ACD1F5D0091432A /* Otaku V2 */,
-				0DA10AFF2ACD1F600091432A /* Otaku V2Tests */,
-				0DA10B092ACD1F600091432A /* Otaku V2UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,20 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0DA10AFE2ACD1F600091432A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DA10B082ACD1F600091432A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,43 +221,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA10AF22ACD1F5D0091432A /* ViewController.swift in Sources */,
+				0D2FDA362ADBEFE700ED5C9D /* FilterVC.swift in Sources */,
+				0D7773742ADA9E140034839D /* SortVC.swift in Sources */,
+				0DA10AF22ACD1F5D0091432A /* MainVC.swift in Sources */,
+				0D2FDA422ADC07FA00ED5C9D /* EpisodesVC.swift in Sources */,
+				0D7773712ADA9D120034839D /* UniqueCell.swift in Sources */,
+				0DA10B1E2ACD2CF60091432A /* InfoVC.swift in Sources */,
+				0D2FDA4A2ADC0AA600ED5C9D /* Quality.swift in Sources */,
+				0DDC69F92ACE45A90018A8BF /* AnimeCell.swift in Sources */,
+				0D2FDA4C2ADC0ADD00ED5C9D /* QualityCell.swift in Sources */,
+				0D77737A2ADAA6B00034839D /* Anime.swift in Sources */,
+				0D2FDA3C2ADBF0ED00ED5C9D /* FilterCell.swift in Sources */,
+				0D2FDA402ADBF48300ED5C9D /* SearchVC.swift in Sources */,
 				0DA10AEE2ACD1F5D0091432A /* AppDelegate.swift in Sources */,
-				0DA10AF02ACD1F5D0091432A /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DA10AFC2ACD1F600091432A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DA10B052ACD1F600091432A /* Otaku_V2Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0DA10B062ACD1F600091432A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0DA10B112ACD1F600091432A /* Otaku_V2UITestsLaunchTests.swift in Sources */,
-				0DA10B0F2ACD1F600091432A /* Otaku_V2UITests.swift in Sources */,
+				0D2FDA482ADC0A5A00ED5C9D /* QualityVC.swift in Sources */,
+				0D2FDA342ADBDBEF00ED5C9D /* Unique.swift in Sources */,
+				0D2FDA2D2ADBD63C00ED5C9D /* VerticalList.swift in Sources */,
+				0D2FDA3E2ADBF32E00ED5C9D /* FavouriteVC.swift in Sources */,
+				0D2FDA3A2ADBF05100ED5C9D /* Filter.swift in Sources */,
+				0D2FDA2F2ADBD8D900ED5C9D /* InfoView.swift in Sources */,
+				0D7773762ADAA0E70034839D /* StaticUIElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0DA10B022ACD1F600091432A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0DA10AE92ACD1F5D0091432A /* Otaku V2 */;
-			targetProxy = 0DA10B012ACD1F600091432A /* PBXContainerItemProxy */;
-		};
-		0DA10B0C2ACD1F600091432A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0DA10AE92ACD1F5D0091432A /* Otaku V2 */;
-			targetProxy = 0DA10B0B2ACD1F600091432A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0DA10AF32ACD1F5D0091432A /* Main.storyboard */ = {
@@ -367,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,6 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FDK7GQU72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Otaku V2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -446,6 +397,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +407,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,6 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6FDK7GQU72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Otaku V2/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,6 +426,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,79 +436,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0DA10B182ACD1F600091432A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alex-co.Otaku-V2Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otaku V2.app/Otaku V2";
-			};
-			name = Debug;
-		};
-		0DA10B192ACD1F600091432A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alex-co.Otaku-V2Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otaku V2.app/Otaku V2";
-			};
-			name = Release;
-		};
-		0DA10B1B2ACD1F600091432A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alex-co.Otaku-V2UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Otaku V2";
-			};
-			name = Debug;
-		};
-		0DA10B1C2ACD1F600091432A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "alex-co.Otaku-V2UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Otaku V2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -575,24 +457,6 @@
 			buildConfigurations = (
 				0DA10B152ACD1F600091432A /* Debug */,
 				0DA10B162ACD1F600091432A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0DA10B172ACD1F600091432A /* Build configuration list for PBXNativeTarget "Otaku V2Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0DA10B182ACD1F600091432A /* Debug */,
-				0DA10B192ACD1F600091432A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0DA10B1A2ACD1F600091432A /* Build configuration list for PBXNativeTarget "Otaku V2UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0DA10B1B2ACD1F600091432A /* Debug */,
-				0DA10B1C2ACD1F600091432A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
