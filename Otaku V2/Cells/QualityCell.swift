@@ -9,19 +9,19 @@ import Foundation
 import UIKit
 
 class QualityCell: UITableViewCell, VerticalListDelegate {
-    var title: UILabel = StaticUIElements.createLabel(weight: .bold, size: 18)
+    var name: UILabel = StaticUIElements.createLabel(weight: .bold, size: 18)
     var link = URL(string: "jut.su/anime")
     var watchBtn: UIButton = StaticUIElements.createButton(title: "👁", color: .systemYellow)
     var downloadBtn: UIButton = StaticUIElements.createButton(title: "🛩", color: .systemGreen)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        title.numberOfLines = 1
-        title.translatesAutoresizingMaskIntoConstraints = false
+        name.numberOfLines = 1
+        name.translatesAutoresizingMaskIntoConstraints = false
         watchBtn.translatesAutoresizingMaskIntoConstraints = false
         downloadBtn.translatesAutoresizingMaskIntoConstraints = false
         
-        contentView.addSubview(title)
+        contentView.addSubview(name)
         contentView.addSubview(downloadBtn)
         contentView.addSubview(watchBtn)
         
@@ -29,10 +29,10 @@ class QualityCell: UITableViewCell, VerticalListDelegate {
         watchBtn.addTarget(self, action: #selector(onWatchButtonClicked), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
-            title.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            title.trailingAnchor.constraint(equalTo: watchBtn.leadingAnchor, constant: -10),
-            title.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            name.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            name.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            name.trailingAnchor.constraint(equalTo: watchBtn.leadingAnchor, constant: -10),
+            name.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
             
             watchBtn.trailingAnchor.constraint(equalTo: downloadBtn.leadingAnchor, constant: -10),
             watchBtn.widthAnchor.constraint(equalToConstant: 100),
@@ -48,8 +48,8 @@ class QualityCell: UITableViewCell, VerticalListDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(data: Quality, indexPath: IndexPath) {
-        title.text = data.title
+    func configure(data: Unique, indexPath: IndexPath) {
+        name.text = data.name
         link = data.link
     }
     

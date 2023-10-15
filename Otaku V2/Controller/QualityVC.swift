@@ -9,10 +9,13 @@ import Foundation
 import UIKit
 class QualityVC: UIViewController {
     
-    private var verticalList: VerticalList<QualityCell, Quality>!
+    private var verticalList: VerticalList<QualityCell, Unique>!
     
-    let data: [Quality] = [
-        Quality(title: "360p", link: URL(string: "360p LINK")!)
+    let data = [
+        Unique(name: "360p", link: URL(string: "300p-Link")!),
+        Unique(name: "480p", link: URL(string: "480p-Link")!),
+        Unique(name: "720p", link: URL(string: "720p-Link")!),
+        Unique(name: "1080p", link: URL(string: "1080p-Link")!),
     ]
     
     override func viewDidLoad() {
@@ -22,11 +25,11 @@ class QualityVC: UIViewController {
     }
     
     func setupUI() {
-        self.verticalList = VerticalList<QualityCell, Quality>(frame: .zero)
+        self.verticalList = VerticalList<QualityCell, Unique>(frame: .zero)
         verticalList.data = data
         verticalList.backgroundColor = .white
         verticalList.didSelect = { data in
-            print("\(data.title) -- \(data.link)")
+            print("\(data.name) -- \(data.link)")
         }
         verticalList.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(verticalList)
