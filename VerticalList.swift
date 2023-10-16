@@ -16,7 +16,7 @@ protocol VerticalListDelegate {
 class VerticalList<T: UITableViewCell, M>: UIView, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegateFlowLayout where T : VerticalListDelegate, T.Model == M {
     
     private let cellIdentifier = "cell"
-    private var tableView: UITableView!
+    var tableView: UITableView!
     var height: CGFloat!
     
     var data: [M] = [] {
@@ -24,6 +24,7 @@ class VerticalList<T: UITableViewCell, M>: UIView, UITableViewDelegate, UITableV
     }
     
     var didSelect: ((M) -> Void)?
+    var didSelectWithCell: ((M, IndexPath) -> Void)?
 
     
     override init(frame: CGRect) {
@@ -68,6 +69,7 @@ class VerticalList<T: UITableViewCell, M>: UIView, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelect?(data[indexPath.row])
+        didSelectWithCell?(data[indexPath.row], indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

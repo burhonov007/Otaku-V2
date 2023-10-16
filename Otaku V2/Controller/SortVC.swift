@@ -29,6 +29,8 @@ class SortVC: UIViewController {
         verticalList.backgroundColor = .white
         verticalList.didSelect = { data in
             print("\(data.name) -- \(data.link)")
+            let mainVC = MainVC()
+            self.navigationController?.pushViewController(mainVC, animated: true)
         }
         verticalList.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(verticalList)

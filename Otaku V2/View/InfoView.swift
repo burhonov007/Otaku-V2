@@ -21,6 +21,11 @@ class InfoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        if isFavourite {
+            animeAdded()
+        } else {
+            animeNotAdded()
+        }
         setup()
     }
     
@@ -73,5 +78,17 @@ class InfoView: UIView {
             btnStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             btnStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
         ])
+    }
+    
+    func animeAdded() {
+        favouriteBtn.setTitle("В избранном", for: .normal)
+        favouriteBtn.backgroundColor = UIColor.yellow
+    }
+        
+    func animeNotAdded() {
+        favouriteBtn.setTitle("В избранное", for: .normal)
+        favouriteBtn.backgroundColor = UIColor.white
+        favouriteBtn.layer.borderWidth = 3.0
+        favouriteBtn.layer.borderColor = UIColor.yellow.cgColor
     }
 }

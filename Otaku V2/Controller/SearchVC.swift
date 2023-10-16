@@ -10,13 +10,18 @@ import UIKit
 
 class SearchVC: UIViewController {
     
-    private var verticalList: VerticalList<FilterCell, Filter>!
+    private var verticalList: VerticalList<AnimeCell, Anime>!
     var searchBar = UISearchBar()
 
-    var data = [
-        Filter(name: "По рейтингу", link: URL(string: "order-by-rating")!),
-        Filter(name: "По году добавления", link: URL(string: "order-by-add-date")!),
-        Filter(name: "По количеству серий", link: URL(string: "order-by-series-count")!),
+    let data = [
+        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
+        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
+        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
+        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
+        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
+        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
+        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
+        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
     ]
     
     override func viewDidLoad() {
@@ -36,10 +41,11 @@ class SearchVC: UIViewController {
         
         
         self.navigationItem.rightBarButtonItem = resetBarButtonItem
-        self.verticalList = VerticalList<FilterCell, Filter>(frame: .zero)
+        self.verticalList = VerticalList<AnimeCell, Anime>(frame: .zero)
         verticalList.backgroundColor = .white
+        verticalList.height = 100
         verticalList.didSelect = { data in
-            print("\(data.name) -- \(data.link)")
+            print(data)
         }
         verticalList.translatesAutoresizingMaskIntoConstraints = false
         searchBar.translatesAutoresizingMaskIntoConstraints = false

@@ -8,9 +8,11 @@ import Foundation
 class Filter {
     var name: String
     var link: URL
+    var isSelect: Bool
     
-    init(name: String, link: URL) {
+    init(name: String, link: URL, isSelect: Bool = false) {
         self.name = name
         self.link = link
+        self.isSelect = isSelect
     }
 }

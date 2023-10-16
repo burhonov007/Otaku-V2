@@ -11,19 +11,26 @@ import UIKit
 class FilterCell: UITableViewCell, VerticalListDelegate {
     var name: UILabel = StaticUIElements.createLabel()
     var link: URL!
-    var isSelect: Bool!
+    var isSelect: Bool = false
+    var selectBtn: UIButton = StaticUIElements.createButton(title: "✔︎", color: .clear, textColor: .clear)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         name.numberOfLines = 1
         name.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(name)
+        selectBtn.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(selectBtn)
         
         NSLayoutConstraint.activate([
-            name.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
-            name.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
-            name.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10),
-            name.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            name.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            name.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            name.trailingAnchor.constraint(equalTo: selectBtn.leadingAnchor, constant: -10),
+            name.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+            
+            selectBtn.widthAnchor.constraint(equalTo: contentView.heightAnchor),
+            selectBtn.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            selectBtn.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
         ])
     }
     
@@ -34,6 +41,7 @@ class FilterCell: UITableViewCell, VerticalListDelegate {
     func configure(data: Filter, indexPath: IndexPath) {
         name.text = data.name
         link = data.link
+        isSelect = data.isSelect
     }
-
+    
 }

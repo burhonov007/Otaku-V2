@@ -35,8 +35,13 @@ class InfoVC: UIViewController {
     }
     
     @objc func onFavouriteButtonClicked(_ sender: Any) {
-        print("12")
-        infoView.isFavourite = !infoView.isFavourite
+        if !infoView.isFavourite {
+            infoView.animeAdded()
+            infoView.isFavourite = true
+        } else {
+            infoView.animeNotAdded()
+            infoView.isFavourite = false
+        }
     }
     
     

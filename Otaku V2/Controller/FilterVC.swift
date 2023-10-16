@@ -32,9 +32,22 @@ class FilterVC: UIViewController {
         self.verticalList = VerticalList<FilterCell, Filter>(frame: .zero)
         verticalList.data = data
         verticalList.backgroundColor = .white
-        verticalList.didSelect = { data in
-            print("\(data.name) -- \(data.link)")
+        
+        verticalList.didSelectWithCell = { [self] data, indexPath in
+//            data.isSelect = !data.isSelect
+            print("data.isSelect = !data.isSelect -- \(data.isSelect = !data.isSelect)")
+            let cell = verticalList.tableView.cellForRow(at: indexPath) as! FilterCell
+            if data.isSelect {
+                print("data.isSelect -- \(data.isSelect)")
+                cell.selectBtn.setTitleColor(UIColor.black, for: .normal)
+                data.isSelect = true
+            } else {
+                print("data.notSelect -- \(data.isSelect)")
+                cell.selectBtn.setTitleColor(UIColor.clear, for: .normal) 
+                data.isSelect = false
+            }
         }
+        
         verticalList.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(verticalList)
         NSLayoutConstraint.activate([
@@ -47,10 +60,15 @@ class FilterVC: UIViewController {
     
     @objc func onResetButtonClicked(_ sender: Any){
         print("ResetButtonClicked")
+        verticalList.data.forEach { $0.isSelect = false }
+        let mainVC = MainVC()
+        self.navigationController?.pushViewController(mainVC, animated: true)
     }
     
     @objc func onDoneButtonClicked(_ sender: Any){
         print("DoneButtonClicked")
+        let mainVC = MainVC()
+        self.navigationController?.pushViewController(mainVC, animated: true)
     }
 }
 
