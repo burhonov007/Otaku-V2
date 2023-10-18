@@ -11,17 +11,14 @@ class MainVC: UIViewController {
     
     private var verticalList: VerticalList<AnimeCell, Anime>!
 
-    let data = [
-        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
-        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
-        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
-        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
-    ]
+    var data = [Anime]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Otaku"
+        loadPage()
         setupUI()
+        view.backgroundColor = UIColor(named: "AccentColor")
     }
     
     func setupUI() {
@@ -30,16 +27,16 @@ class MainVC: UIViewController {
         let sortBarButtonItem = UIBarButtonItem(image: UIImage(named: "sort"), style: .plain, target: self, action: #selector(onSortButtonClicked))
         let filterhBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(onFilterButtonClicked))
         
+        
         self.navigationItem.rightBarButtonItems = [searchBarButtonItem, favouriteBarButtonItem]
         self.navigationItem.leftBarButtonItems = [sortBarButtonItem, filterhBarButtonItem]
         self.verticalList = VerticalList<AnimeCell, Anime>(frame: .zero)
         verticalList.data = data
         verticalList.height = 100
         verticalList.didSelect = { data in
-            print(data.name)
+            print("name - \(data.name)")
             let infoVC = InfoVC()
-            infoVC.animeName = data.name
-            infoVC.image = data.poster
+            infoVC.anime = data
             self.navigationController?.pushViewController(infoVC, animated: true)
         }
         verticalList.translatesAutoresizingMaskIntoConstraints = false
@@ -71,4 +68,13 @@ class MainVC: UIViewController {
         let filterVC = FilterVC()
         navigationController?.pushViewController(filterVC, animated: true)
     }
+    
+    
+    func loadPage() {
+        getAnime(from: "https://jut.su/anime/") { [self] animeList in
+            verticalList.data += animeList!
+        }
+    }
+    
+    
 }

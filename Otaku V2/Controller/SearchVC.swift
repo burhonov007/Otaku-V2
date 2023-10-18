@@ -13,19 +13,11 @@ class SearchVC: UIViewController {
     private var verticalList: VerticalList<AnimeCell, Anime>!
     var searchBar = UISearchBar()
 
-    let data = [
-        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
-        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
-        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
-        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
-        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
-        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
-        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
-        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
-    ]
+    let data = [Anime]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "AccentColor")
         title = "Search"
         setupUI()
     }

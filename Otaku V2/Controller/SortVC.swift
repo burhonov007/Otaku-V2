@@ -20,6 +20,7 @@ class SortVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sort"
+        view.backgroundColor = UIColor(named: "AccentColor")
         setupUI()
     }
     

@@ -12,7 +12,8 @@ class FilterCell: UITableViewCell, VerticalListDelegate {
     var name: UILabel = StaticUIElements.createLabel()
     var link: URL!
     var isSelect: Bool = false
-    var selectBtn: UIButton = StaticUIElements.createButton(title: "✔︎", color: .clear, textColor: .clear)
+    var selectBtn: UIButton = StaticUIElements.createButton(title: "✔︎", color: .clear)
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,6 +22,7 @@ class FilterCell: UITableViewCell, VerticalListDelegate {
         self.contentView.addSubview(name)
         selectBtn.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(selectBtn)
+        selectBtn.setTitleColor(.clear, for: .normal)
         
         NSLayoutConstraint.activate([
             name.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),

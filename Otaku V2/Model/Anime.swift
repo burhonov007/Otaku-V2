@@ -7,13 +7,13 @@
 
 import UIKit
 
-class Anime {
+class Anime: Codable {
     var name: String
     var episodesCount: String
-    var poster: UIImage
+    var poster: URL
     var link: URL
     
-    init(name: String, episodesCount: String, poster: UIImage, link: URL) {
+    init(name: String, episodesCount: String, poster: URL, link: URL) {
         self.name = name
         self.episodesCount = episodesCount
         self.poster = poster

@@ -10,19 +10,18 @@ import UIKit
 
 class StaticUIElements {
     
-    static func createLabel(weight: UIFont.Weight? = .medium, size: CGFloat? = 16, textColor: UIColor? = .black) -> UILabel {
+    static func createLabel(weight: UIFont.Weight? = .medium, size: CGFloat? = 16) -> UILabel {
         let label = UILabel()
-        label.textColor = textColor
         label.text = ""
         label.font = UIFont.systemFont(ofSize: size!, weight: weight!)
         return label
     }
     
-    static func createButton(title: String, color: UIColor, textColor: UIColor? = .black) -> UIButton {
+    static func createButton(title: String, color: UIColor) -> UIButton {
         let button = UIButton()
         button.setTitle(title, for: .normal)
-        button.setTitleColor(textColor, for: .normal)
         button.backgroundColor = color
+        button.setTitleColor(.black, for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         return button

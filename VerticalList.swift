@@ -40,7 +40,7 @@ class VerticalList<T: UITableViewCell, M>: UIView, UITableViewDelegate, UITableV
     func setupUI() {
         tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .clear
+        
         addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -53,6 +53,10 @@ class VerticalList<T: UITableViewCell, M>: UIView, UITableViewDelegate, UITableV
         tableView.register(T.self, forCellReuseIdentifier: cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
     }
 
     

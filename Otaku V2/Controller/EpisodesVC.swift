@@ -18,6 +18,7 @@ class EpisodesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "AccentColor")
         title = "Episodes"
         setupUI()
     }

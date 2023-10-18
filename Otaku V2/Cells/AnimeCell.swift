@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AnimeCell: UITableViewCell, VerticalListDelegate {
 
@@ -51,7 +52,8 @@ class AnimeCell: UITableViewCell, VerticalListDelegate {
     }
     
     func configure(data: Anime, indexPath: IndexPath) {
-        poster.image = data.poster
+
+        poster.sd_setImage(with: data.poster, placeholderImage: UIImage(named: "no image"))
         name.text = data.name
         episodes.text = data.episodesCount
         link = data.link

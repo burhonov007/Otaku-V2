@@ -11,21 +11,23 @@ class FavouriteVC: UIViewController {
     
     private var verticalList: VerticalList<AnimeCell, Anime>!
 
-    let data = [
-        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
-        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
-        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
-        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
-        Anime(name: "Jujutsu Kaisen", episodesCount: "44 episodes", poster: UIImage(named: "jujutsu")!, link: URL(string: "jujutsu.html")!),
-        Anime(name: "Fullmetall Alchemist", episodesCount: "106 episodes", poster: UIImage(named: "metal")!, link: URL(string: "metal.html")!),
-        Anime(name: "Ragna Red", episodesCount: "2 episodes", poster: UIImage(named: "ragna")!, link: URL(string: "ragna.html")!),
-        Anime(name: "Nanatsu No Tazai", episodesCount: "200 episodes", poster: UIImage(named: "nanatsu")!, link: URL(string: "nanatsu.html")!),
-    ]
+    var data = [Anime]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "AccentColor")
         title = "Favourites"
+        data = FavouriteManager.loadData()
+        if data.isEmpty {
+            Alerts.AccessDeniedAlertOrNoData(title: "Нет аниме", message: "Вы еще не добавляли аниме в избранное", viewController: self)
+        }
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        data = FavouriteManager.loadData()
+        verticalList.reloadTableView()
     }
     
     func setupUI() {
@@ -34,10 +36,8 @@ class FavouriteVC: UIViewController {
         verticalList.height = 100
         verticalList.backgroundColor = .white
         verticalList.didSelect = { data in
-            print(data.name)
             let infoVC = InfoVC()
-            infoVC.animeName = data.name
-            infoVC.image = data.poster
+            infoVC.anime = data
             self.navigationController?.pushViewController(infoVC, animated: true)
         }
         verticalList.translatesAutoresizingMaskIntoConstraints = false

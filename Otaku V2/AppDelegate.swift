@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let navigationController = UINavigationController()
-        navigationController.navigationBar.backgroundColor = .white
-        navigationController.view.backgroundColor = .white
+//        navigationController.navigationBar.backgroundColor = UIColor(named: "AccentColor")
+        navigationController.view.backgroundColor = UIColor(named: "AccentColor")
         navigationController.navigationBar.prefersLargeTitles = true
         let mainVC = MainVC()
         navigationController.viewControllers = [mainVC]

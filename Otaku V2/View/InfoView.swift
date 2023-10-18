@@ -10,22 +10,16 @@ import UIKit
 
 class InfoView: UIView {
 
-    var poster: UIImageView!
+    var poster = UIImageView()
     var genreLbl: UILabel = StaticUIElements.createLabel()
     var releaseYearLbl: UILabel = StaticUIElements.createLabel()
     var originalTitleLbl: UILabel = StaticUIElements.createLabel()
     var ageLimitLbl: UILabel = StaticUIElements.createLabel()
     var watchBtn: UIButton = StaticUIElements.createButton(title: "Смотреть", color: .green)
     var favouriteBtn: UIButton = StaticUIElements.createButton(title: "В избранное", color: .yellow)
-    var isFavourite: Bool = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        if isFavourite {
-            animeAdded()
-        } else {
-            animeNotAdded()
-        }
         setup()
     }
     
@@ -34,8 +28,6 @@ class InfoView: UIView {
     }
     
     func setup() {
-        backgroundColor = .white
-        poster = UIImageView(image: UIImage(named: "ragna"))
         poster.layer.cornerRadius = 15
         poster.clipsToBounds = true
         
@@ -78,17 +70,5 @@ class InfoView: UIView {
             btnStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             btnStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
         ])
-    }
-    
-    func animeAdded() {
-        favouriteBtn.setTitle("В избранном", for: .normal)
-        favouriteBtn.backgroundColor = UIColor.yellow
-    }
-        
-    func animeNotAdded() {
-        favouriteBtn.setTitle("В избранное", for: .normal)
-        favouriteBtn.backgroundColor = UIColor.white
-        favouriteBtn.layer.borderWidth = 3.0
-        favouriteBtn.layer.borderColor = UIColor.yellow.cgColor
     }
 }
