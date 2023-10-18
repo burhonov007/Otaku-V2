@@ -18,7 +18,7 @@ class MainVC: UIViewController {
         title = "Otaku"
         loadPage()
         setupUI()
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
     }
     
     func setupUI() {
@@ -34,7 +34,6 @@ class MainVC: UIViewController {
         verticalList.data = data
         verticalList.height = 100
         verticalList.didSelect = { data in
-            print("name - \(data.name)")
             let infoVC = InfoVC()
             infoVC.anime = data
             self.navigationController?.pushViewController(infoVC, animated: true)

@@ -20,7 +20,7 @@ class QualityVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
         title = "Quality"
         setupUI()
     }

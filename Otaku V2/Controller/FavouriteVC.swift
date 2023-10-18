@@ -15,7 +15,7 @@ class FavouriteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
         title = "Favourites"
         data = FavouriteManager.loadData()
         if data.isEmpty {

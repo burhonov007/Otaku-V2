@@ -20,7 +20,7 @@ class FilterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
         title = "Filter"
         setupUI()
     }
@@ -34,19 +34,14 @@ class FilterVC: UIViewController {
         verticalList.data = data
         verticalList.backgroundColor = .white
         
-        verticalList.didSelectWithCell = { [self] data, indexPath in
-//            data.isSelect = !data.isSelect
-            print("data.isSelect = !data.isSelect -- \(data.isSelect = !data.isSelect)")
-            let cell = verticalList.tableView.cellForRow(at: indexPath) as! FilterCell
+        verticalList.didSelectWithCell = { data, indexPath in
+            let cell = self.verticalList.tableView.cellForRow(at: indexPath) as! FilterCell
             if data.isSelect {
-                print("data.isSelect -- \(data.isSelect)")
-                cell.selectBtn.setTitleColor(UIColor.black, for: .normal)
-                data.isSelect = true
+                cell.selectBtn.setTitleColor(UIColor(named: "foreground"), for: .normal)
             } else {
-                print("data.notSelect -- \(data.isSelect)")
-                cell.selectBtn.setTitleColor(UIColor.clear, for: .normal) 
-                data.isSelect = false
+                cell.selectBtn.setTitleColor(UIColor(named: "foreground")?.withAlphaComponent(0), for: .normal)
             }
+            cell.selectBtn.isHidden = !data.isSelect
         }
         
         verticalList.translatesAutoresizingMaskIntoConstraints = false
@@ -60,14 +55,11 @@ class FilterVC: UIViewController {
     }
     
     @objc func onResetButtonClicked(_ sender: Any){
-        print("ResetButtonClicked")
-        verticalList.data.forEach { $0.isSelect = false }
         let mainVC = MainVC()
         self.navigationController?.pushViewController(mainVC, animated: true)
     }
     
     @objc func onDoneButtonClicked(_ sender: Any){
-        print("DoneButtonClicked")
         let mainVC = MainVC()
         self.navigationController?.pushViewController(mainVC, animated: true)
     }

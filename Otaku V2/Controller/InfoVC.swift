@@ -16,10 +16,7 @@ class InfoVC: UIViewController {
     override func loadView() {
         infoView = InfoView()
         self.view = infoView
-        view.backgroundColor = UIColor(named: "AccentColor")
-        loadedAnimeList.forEach { Anime in
-            print("name - \(Anime.name)")
-        }
+        view.backgroundColor = UIColor(named: "background")
     }
     
     override func viewDidLoad() {
@@ -73,7 +70,7 @@ class InfoVC: UIViewController {
         infoView.favouriteBtn.setTitle("В избранное", for: .normal)
         infoView.favouriteBtn.backgroundColor = UIColor.white
         infoView.favouriteBtn.layer.borderWidth = 3.0
-        infoView.favouriteBtn.backgroundColor = UIColor(named: "AccentColor")
+        infoView.favouriteBtn.backgroundColor = UIColor(named: "background")
         infoView.favouriteBtn.layer.borderColor = UIColor.yellow.cgColor
     }
 }

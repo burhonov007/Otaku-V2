@@ -20,7 +20,7 @@ class SortVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sort"
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
         setupUI()
     }
     
@@ -29,7 +29,6 @@ class SortVC: UIViewController {
         verticalList.data = data
         verticalList.backgroundColor = .white
         verticalList.didSelect = { data in
-            print("\(data.name) -- \(data.link)")
             let mainVC = MainVC()
             self.navigationController?.pushViewController(mainVC, animated: true)
         }

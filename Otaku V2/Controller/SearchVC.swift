@@ -13,11 +13,11 @@ class SearchVC: UIViewController {
     private var verticalList: VerticalList<AnimeCell, Anime>!
     var searchBar = UISearchBar()
 
-    let data = [Anime]()
+    var data = [Anime]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
         title = "Search"
         setupUI()
     }
@@ -29,7 +29,7 @@ class SearchVC: UIViewController {
         searchBar.placeholder = "Search..."
         searchBar.showsScopeBar = true
         searchBar.showsCancelButton = true
-        searchBar.backgroundColor = .white
+        searchBar.backgroundColor = UIColor(named: "background")
         
         
         self.navigationItem.rightBarButtonItem = resetBarButtonItem
@@ -37,7 +37,9 @@ class SearchVC: UIViewController {
         verticalList.backgroundColor = .white
         verticalList.height = 100
         verticalList.didSelect = { data in
-            print(data)
+            let infoVC = InfoVC()
+            infoVC.anime = data
+            self.navigationController?.pushViewController(infoVC, animated: true)
         }
         verticalList.translatesAutoresizingMaskIntoConstraints = false
         searchBar.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +68,13 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        verticalList.data = data
+        
+        search(page: 1, searchText: searchBar.text!) { [weak self] searchedAnime in
+            self?.verticalList.data += searchedAnime
+            DispatchQueue.main.async {
+                self!.verticalList.reloadTableView()
+            }
+        }
     }
     
 

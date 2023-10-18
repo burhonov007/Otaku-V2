@@ -21,7 +21,7 @@ class StaticUIElements {
         let button = UIButton()
         button.setTitle(title, for: .normal)
         button.backgroundColor = color
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(UIColor(named: "foreground"), for: .normal)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         return button

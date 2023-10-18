@@ -18,7 +18,7 @@ class EpisodesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "AccentColor")
+        view.backgroundColor = UIColor(named: "background")
         title = "Episodes"
         setupUI()
     }
@@ -28,7 +28,6 @@ class EpisodesVC: UIViewController {
         verticalList.data = data
         verticalList.backgroundColor = .white
         verticalList.didSelect = { data in
-            print("\(data.name) -- \(data.link)")
             let qualityVC = QualityVC()
             self.navigationController?.pushViewController(qualityVC, animated: true)
         }
